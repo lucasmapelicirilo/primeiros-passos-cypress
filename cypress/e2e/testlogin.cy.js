@@ -1,4 +1,4 @@
-describe('Test Training', () => {
+describe('Tests login', () => {
   it('login - success', () => {
     cy.visit('https://practicetestautomation.com/practice-test-login/?utm_source=chatgpt.com')
     cy.get('[name="username"]').type('student')
