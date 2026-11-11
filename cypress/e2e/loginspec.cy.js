@@ -4,6 +4,7 @@ describe('Orange HRM Tests', () => {
     usernameField: '[name="username"]',
     passwordField: '[name="password"]',
     loginButton: '.oxd-button',
+    dashboardGrid: '.orangehrm-upgrade-layout',
     wrongCredentialAlert: '.oxd-alert'
   }
 
@@ -13,6 +14,7 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorsList.passwordField).type('admin123')
     cy.get(selectorsList.loginButton).click()
     cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
+    cy.get(selectorsList.dashboardGrid)
   })
 
   it('Login - fail', () => {
